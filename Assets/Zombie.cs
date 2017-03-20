@@ -27,7 +27,7 @@ public class Zombie : MonoBehaviour {
 
 			if (direction.magnitude > 5) {
 				anim.SetBool ("isWalking", true);
-				this.transform.Translate (0f, 0f, 0.01*zspeed);
+				this.transform.Translate (0f, 0f, 0.01f*zSpeed);
 			} else {
 
 				anim.SetBool ("isWalking", false);
