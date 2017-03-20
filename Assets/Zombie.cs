@@ -6,9 +6,13 @@ public class Zombie : MonoBehaviour {
 
 	public Transform player;
 	Animator anim;
+	float zSpeed;
+
+
 	// Use this for initialization
 	void Start () {
 		anim = GetComponent<Animator> ();
+		zSpeed = 5f;
 	}
 	
 	// Update is called once per frame
@@ -23,7 +27,7 @@ public class Zombie : MonoBehaviour {
 
 			if (direction.magnitude > 5) {
 				anim.SetBool ("isWalking", true);
-				this.transform.Translate (0f, 0f, 0.1f);
+				this.transform.Translate (0f, 0f, 0.01*zspeed);
 			} else {
 
 				anim.SetBool ("isWalking", false);
